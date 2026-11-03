@@ -20,13 +20,8 @@ public class Money {
         return this.amount.compareTo(money.amount) == 0 && Objects.equals(this.currency, money.currency);
     }
 
-    /**
-     * Реализация hashCode() из Object считает хэш-код на основе адреса памяти,
-     * поэтому у двух одинаковых объектов будет разный хэш-код
-     */
     @Override
     public int hashCode() {
-        //return super.hashCode();
         return Objects.hash(amount, currency);
     }
 }
